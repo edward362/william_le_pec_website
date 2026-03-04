@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Instagram, MapPin, Phone } from "lucide-react";
+import { Instagram, MapPin, Phone, Facebook } from "lucide-react";
 
 export function Footer() {
     return (
@@ -53,9 +53,11 @@ export function Footer() {
                             </Link>
                         </nav>
                         <div className="flex gap-4 mt-6">
-                            {/* Assuming they might have an Instagram, placeholder icon */}
-                            <a href="#" className="p-2 border border-white/20 rounded-full hover:bg-gold hover:border-gold hover:text-white transition-all">
+                            <a href="https://www.instagram.com/williamlepec/" target="_blank" rel="noopener noreferrer" className="p-2 border border-white/20 rounded-full hover:bg-gold hover:border-gold hover:text-white transition-all">
                                 <Instagram size={18} strokeWidth={1.5} />
+                            </a>
+                            <a href="https://www.facebook.com/williamlepec?fref=ts" target="_blank" rel="noopener noreferrer" className="p-2 border border-white/20 rounded-full hover:bg-gold hover:border-gold hover:text-white transition-all">
+                                <Facebook size={18} strokeWidth={1.5} />
                             </a>
                         </div>
                     </div>
