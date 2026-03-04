@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
 const NAV_LINKS = [
+    { name: "Accueil", href: "/" },
     { name: "Le salon", href: "/salon" },
     { name: "Les prestations", href: "/prestations" },
     { name: "L'équipe", href: "/equipe" },
