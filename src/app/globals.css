@@ -51,7 +51,7 @@
 
 /* Custom Selection */
 ::selection {
-  @apply bg-[var(--color-gold)] text-white;
+  background-color: rgba(197, 160, 89, 0.3);
 }
 
 /* Scrollbar Customization */

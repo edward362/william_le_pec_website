@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Star } from "lucide-react";
 import { ImageLoop } from "@/components/ui/image-loop";
+import { Testimonials } from "@/components/ui/testimonials";
 
 export default function Home() {
   const reasons = [
@@ -213,6 +214,24 @@ export default function Home() {
         <ImageLoop images={galleryImages} />
       </section>
 
+      {/* TESTIMONIALS SECTION */}
+      <section className="py-24 bg-white dark:bg-charcoal-light overflow-hidden border-b border-gold/10">
+        <div className="container mx-auto px-6 mb-12 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="font-serif text-4xl md:text-5xl text-charcoal dark:text-cream mb-4">
+              Ce que disent nos <span className="italic text-gold">clients</span>
+            </h2>
+            <p className="font-sans text-sm uppercase tracking-widest text-gold/80">Témoignages Vérifiés</p>
+          </motion.div>
+        </div>
+        <Testimonials />
+      </section>
+
       {/* 10 REASONS SECTION */}
       <section className="py-24 md:py-32 bg-cream dark:bg-charcoal px-6">
         <div className="container mx-auto max-w-5xl">
@@ -268,8 +287,8 @@ export default function Home() {
           <p className="font-sans text-xs uppercase tracking-[0.2em] text-gold mb-6">
             Votre voyage commence ici
           </p>
-          <h2 className="font-serif text-4xl md:text-5xl mb-8">
-            Réservez votre <span className="italic text-gold">sensation</span>
+          <h2 className="font-serif text-4xl md:text-5xl mb-8 text-gold">
+            Réservez votre <span className="italic">sensation</span>
           </h2>
           <a
             href="http://www.planity.com/salon-w-william-le-pec-75002-paris"
