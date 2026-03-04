@@ -27,7 +27,7 @@ export function ProfileCard({ name, role, image, description }: ProfileCardProps
             />
 
             {/* Gradient Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent z-10 transition-opacity duration-500 group-hover:opacity-80" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent z-10 transition-opacity duration-500 group-hover:from-black group-hover:via-black/95 group-hover:to-black/40" />
 
             {/* Content Container */}
             <div className="relative z-20 h-full flex flex-col justify-end p-8 text-white">
@@ -37,8 +37,8 @@ export function ProfileCard({ name, role, image, description }: ProfileCardProps
                     }}
                     transition={{ duration: 0.4, ease: "easeOut" }}
                 >
-                    <p className="font-sans text-xs uppercase tracking-widest text-gold mb-2">{role}</p>
-                    <h3 className="font-serif text-3xl mb-1">{name}</h3>
+                    <p className="font-sans text-xs uppercase tracking-widest text-[#a8824a] mb-2">{role}</p>
+                    <h3 className="font-serif text-3xl mb-1 text-[#d4af37] drop-shadow-md">{name}</h3>
                 </motion.div>
 
                 {/* Hidden Description that reveals on hover */}

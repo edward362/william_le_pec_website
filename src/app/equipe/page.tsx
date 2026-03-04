@@ -40,28 +40,28 @@ export default function Equipe() {
                 >
                     <motion.div variants={itemVariants}>
                         <ProfileCard
-                            name="William LE PEC"
-                            role="Directeur de création"
-                            image="/images/l'équipe/20160701172545046df9-Portrait_WLP-1200x1200-2.jpg"
+                            name="William Le Pec"
+                            role="Directeur Créatif"
+                            image="/images/equipe/20160701172545046df9-Portrait_WLP-1200x1200-2.jpg"
                             description="La passion de la coiffure sur mesure. Des expériences uniques enrichies par des voyages internationaux et des collaborations prestigieuses. William est à l'écoute pour révéler la beauté unique de chaque client grâce à ses coupes &quot;mémorielles&quot;."
                         />
                     </motion.div>
 
                     <motion.div variants={itemVariants}>
                         <ProfileCard
-                            name="Jérôme"
-                            role="Manager"
-                            image="/images/l'équipe/marc1.jpg"
-                            description="L'art de l'organisation et du service perfectionnés. Jérôme veille à ce que votre expérience au salon W soit exceptionnelle à chaque visite, mettant son talent au service de votre bien-être."
+                            name="Marc André"
+                            role="Coiffeur Expert"
+                            image="/images/equipe/marc1.jpg"
+                            description="L'art de l'organisation et du service perfectionnés. Marc veille à ce que votre expérience au salon W soit exceptionnelle à chaque visite, mettant son talent au service de votre bien-être."
                         />
                     </motion.div>
 
                     <motion.div variants={itemVariants}>
                         <ProfileCard
-                            name="Nao"
-                            role="Top Styliste"
-                            image="/images/l'équipe/celine1.jpg"
-                            description="Créativité et précision au service de votre style. Nao maîtrise les techniques les plus récentes pour vous offrir une coupe et une apparence qui vous correspondent."
+                            name="Céline Le Pec"
+                            role="Directrice Artistique et Créatrice"
+                            image="/images/equipe/celine1.jpg"
+                            description="Créativité et précision au service de votre style. Céline maîtrise les techniques les plus récentes pour vous offrir une coupe et une apparence qui vous correspondent."
                         />
                     </motion.div>
                 </motion.div>
