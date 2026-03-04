@@ -53,21 +53,75 @@ export default function Home() {
         </div>
 
         <div className="relative z-10 container mx-auto px-6 text-center text-cream">
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="font-sans text-xs md:text-sm uppercase tracking-[0.3em] text-gold mb-6"
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            className="flex flex-col items-center justify-center mb-12"
           >
-            Salon de coiffure à Paris
-          </motion.p>
+            {/* The big W */}
+            <motion.div
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="relative flex flex-col items-center mb-6"
+            >
+              <div
+                className="text-8xl md:text-9xl lg:text-[11rem] text-transparent bg-clip-text bg-gradient-to-b from-[#fdf6d5] via-[#d4af37] to-[#8a6d1c]"
+                style={{ fontFamily: '"Times New Roman", Times, serif', lineHeight: 0.8 }}
+              >
+                W
+              </div>
+              {/* Reflection */}
+              <div
+                className="absolute top-full pt-1 left-0 right-0 flex justify-center text-8xl md:text-9xl lg:text-[11rem] text-transparent bg-clip-text bg-gradient-to-b from-[#fdf6d5] via-[#d4af37] to-[#8a6d1c] transform -scale-y-100 opacity-40 select-none pointer-events-none"
+                style={{
+                  fontFamily: '"Times New Roman", Times, serif',
+                  lineHeight: 0.8,
+                  WebkitMaskImage: 'linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 40%)',
+                  maskImage: 'linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 40%)'
+                }}
+              >
+                W
+              </div>
+            </motion.div>
+
+            {/* WILLIAM LE PEC */}
+            <motion.div
+              initial={{ letterSpacing: "0em", opacity: 0 }}
+              animate={{ letterSpacing: "0.2em", opacity: 1 }}
+              transition={{ duration: 1.2, delay: 0.5, ease: "easeOut" }}
+              className="font-sans text-sm md:text-base text-cream uppercase tracking-[0.2em] mb-3 flex items-center font-medium"
+            >
+              W i l l i a m &nbsp;&nbsp; L e &nbsp;&nbsp; P e c <span className="text-[10px] ml-1 align-top relative -top-1">®</span>
+            </motion.div>
+
+            {/* Thin Fading Line */}
+            <motion.div
+              initial={{ width: 0, opacity: 0 }}
+              animate={{ width: "100%", maxWidth: "300px", opacity: 1 }}
+              transition={{ duration: 1, delay: 0.8 }}
+              className="h-[1px] w-full bg-gradient-to-r from-transparent via-[#d4af37] to-transparent mb-3"
+            />
+
+            {/* Coiffeur Studio */}
+            <motion.div
+              initial={{ y: -10, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.8, delay: 1 }}
+              className="font-sans text-xs md:text-sm text-cream/80 tracking-[0.3em] uppercase"
+            >
+              Coiffeur - Studio
+            </motion.div>
+          </motion.div>
+
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.4 }}
-            className="font-serif text-5xl md:text-7xl lg:text-8xl font-light tracking-tight mb-8 text-cream"
+            transition={{ duration: 1, delay: 1.2 }}
+            className="font-serif text-2xl md:text-3xl lg:text-4xl font-light tracking-widest mb-10 text-cream/90"
           >
-            L'Excellence <br />
+            L&apos;Excellence <br />
             <span className="italic text-gold-light">sur mesure.</span>
           </motion.h1>
           <motion.div

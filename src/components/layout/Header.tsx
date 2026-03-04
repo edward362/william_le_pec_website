@@ -30,23 +30,20 @@ export function Header() {
     return (
         <header
             className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled
-                    ? "bg-cream/90 dark:bg-charcoal/90 backdrop-blur-md shadow-sm py-4"
-                    : "bg-transparent py-6"
+                ? "bg-cream/90 dark:bg-charcoal/90 backdrop-blur-md shadow-sm py-4"
+                : "bg-transparent py-6"
                 }`}
         >
             <div className="container mx-auto px-6 lg:px-12 flex items-center justify-between">
                 {/* LOGO */}
                 <Link href="/" className="z-50 group flex flex-col items-center">
-                    <motion.div
+                    <motion.img
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        className="font-serif text-3xl font-light tracking-widest text-charcoal dark:text-cream"
-                    >
-                        SALON W
-                    </motion.div>
-                    <span className="text-[10px] uppercase tracking-[0.3em] font-sans text-charcoal/60 dark:text-cream/60">
-                        William Le Pec
-                    </span>
+                        src="/images/Logo/logo-petit.png"
+                        alt="Salon W William Le Pec"
+                        className="h-12 md:h-14 w-auto object-contain"
+                    />
                 </Link>
 
                 {/* DESKTOP NAV */}

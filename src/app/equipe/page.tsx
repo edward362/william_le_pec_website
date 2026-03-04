@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { ProfileCard } from "@/components/ui/profile-card";
 
 export default function Equipe() {
     const containerVariants = {
@@ -35,31 +36,34 @@ export default function Equipe() {
                     variants={containerVariants}
                     initial="hidden"
                     animate="visible"
-                    className="space-y-16 text-left"
+                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-left"
                 >
-                    <motion.section variants={itemVariants} className="bg-white/50 dark:bg-charcoal-light/50 p-8 border border-gold/10">
-                        <h2 className="font-serif text-2xl text-charcoal dark:text-cream mb-2">William LE PEC</h2>
-                        <p className="font-sans text-xs uppercase tracking-widest text-gold mb-6">Directeur de création</p>
-                        <p className="font-sans text-sm text-charcoal/80 dark:text-cream/80 font-light leading-relaxed mb-4">
-                            La passion de la coiffure sur mesure. Des expériences uniques enrichies par des voyages internationaux et des collaborations prestigieuses. William est à l&apos;écoute pour révéler la beauté unique de chaque client grâce à ses coupes &quot;mémorielles&quot;.
-                        </p>
-                    </motion.section>
+                    <motion.div variants={itemVariants}>
+                        <ProfileCard
+                            name="William LE PEC"
+                            role="Directeur de création"
+                            image="/images/l'équipe/20160701172545046df9-Portrait_WLP-1200x1200-2.jpg"
+                            description="La passion de la coiffure sur mesure. Des expériences uniques enrichies par des voyages internationaux et des collaborations prestigieuses. William est à l'écoute pour révéler la beauté unique de chaque client grâce à ses coupes &quot;mémorielles&quot;."
+                        />
+                    </motion.div>
 
-                    <motion.section variants={itemVariants} className="bg-white/50 dark:bg-charcoal-light/50 p-8 border border-gold/10">
-                        <h2 className="font-serif text-2xl text-charcoal dark:text-cream mb-2">Jérôme</h2>
-                        <p className="font-sans text-xs uppercase tracking-widest text-gold mb-6">Manager</p>
-                        <p className="font-sans text-sm text-charcoal/80 dark:text-cream/80 font-light leading-relaxed mb-4">
-                            L&apos;art de l&apos;organisation et du service perfectionnés. Jérôme veille à ce que votre expérience au salon W soit exceptionnelle à chaque visite, mettant son talent au service de votre bien-être.
-                        </p>
-                    </motion.section>
+                    <motion.div variants={itemVariants}>
+                        <ProfileCard
+                            name="Jérôme"
+                            role="Manager"
+                            image="/images/l'équipe/marc1.jpg"
+                            description="L'art de l'organisation et du service perfectionnés. Jérôme veille à ce que votre expérience au salon W soit exceptionnelle à chaque visite, mettant son talent au service de votre bien-être."
+                        />
+                    </motion.div>
 
-                    <motion.section variants={itemVariants} className="bg-white/50 dark:bg-charcoal-light/50 p-8 border border-gold/10">
-                        <h2 className="font-serif text-2xl text-charcoal dark:text-cream mb-2">Nao</h2>
-                        <p className="font-sans text-xs uppercase tracking-widest text-gold mb-6">Top Styliste</p>
-                        <p className="font-sans text-sm text-charcoal/80 dark:text-cream/80 font-light leading-relaxed mb-4">
-                            Créativité et précision au service de votre style. Nao maîtrise les techniques les plus récentes pour vous offrir une coupe et une apparence qui vous correspondent.
-                        </p>
-                    </motion.section>
+                    <motion.div variants={itemVariants}>
+                        <ProfileCard
+                            name="Nao"
+                            role="Top Styliste"
+                            image="/images/l'équipe/celine1.jpg"
+                            description="Créativité et précision au service de votre style. Nao maîtrise les techniques les plus récentes pour vous offrir une coupe et une apparence qui vous correspondent."
+                        />
+                    </motion.div>
                 </motion.div>
             </div>
         </main>
