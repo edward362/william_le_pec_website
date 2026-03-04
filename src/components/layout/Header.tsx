@@ -75,12 +75,9 @@ export function Header() {
                         href="http://www.planity.com/salon-w-william-le-pec-75002-paris"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="group relative px-6 py-2 border border-gold text-gold font-sans text-xs uppercase tracking-widest overflow-hidden transition-colors hover:text-white"
+                        className="group relative px-6 py-2 border border-gold text-gold font-sans text-xs uppercase tracking-widest transition-colors hover:text-charcoal hover:bg-gold/10"
                     >
-                        <span className="relative z-10 transition-colors duration-300 group-hover:text-white">
-                            Réserver en ligne
-                        </span>
-                        <div className="absolute inset-0 bg-gold translate-y-full transition-transform duration-300 ease-in-out group-hover:translate-y-0" />
+                        Réserver en ligne
                     </a>
                 </div>
 

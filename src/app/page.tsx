@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight, Star } from "lucide-react";
+import { ImageLoop } from "@/components/ui/image-loop";
 
 export default function Home() {
   const reasons = [
@@ -15,6 +16,20 @@ export default function Home() {
     "Un salon spécialiste des cheveux bouclés",
     "Un espace idéalement situé en plein cœur de Paris",
     "Une équipe à l’écoute",
+  ];
+
+  const galleryImages = [
+    "/images/haircuts/image-1.jpg",
+    "/images/haircuts/image-2.jpg",
+    "/images/haircuts/image-3.jpg",
+    "/images/haircuts/image-4.jpg",
+    "/images/haircuts/image-5.jpg",
+    "/images/haircuts/image-6.jpg",
+    "/images/haircuts/image-7.jpg",
+    "/images/haircuts/image-8.jpg",
+    "/images/haircuts/image-9.jpg",
+    "/images/haircuts/image-10.jpg",
+    "/images/haircuts/image-11.jpg",
   ];
 
   const containerVariants = {
@@ -109,7 +124,7 @@ export default function Home() {
               initial={{ y: -10, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8, delay: 1 }}
-              className="font-sans text-xs md:text-sm text-cream/80 tracking-[0.3em] uppercase"
+              className="font-sans text-xs md:text-sm text-cream/80 tracking-[0.3em] uppercase mb-8 md:mb-12"
             >
               Coiffeur - Studio
             </motion.div>
@@ -124,6 +139,44 @@ export default function Home() {
             L&apos;Excellence <br />
             <span className="italic text-gold-light">sur mesure.</span>
           </motion.h1>
+
+          {/* Ratings */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 1.4 }}
+            className="flex flex-col items-center gap-3 mb-10"
+          >
+            <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 bg-charcoal/40 backdrop-blur-sm border border-gold/20 rounded-full px-6 py-3">
+              {/* Google Rating */}
+              <div className="flex items-center gap-3">
+                <span className="font-sans font-medium text-cream text-lg">4.7</span>
+                <div className="flex bg-[#00b67a] text-white px-2 py-1 rounded-[3px] gap-[2px]">
+                  {[1, 2, 3, 4, 5].map((star) => (
+                    <Star key={`google-${star}`} size={10} className="fill-white text-white" />
+                  ))}
+                </div>
+                <span className="font-sans text-xs text-cream/70 hidden sm:inline"><span className="underline decoration-white/30 underline-offset-2">Google</span></span>
+              </div>
+
+              <div className="hidden sm:block w-[1px] h-6 bg-gold/30"></div>
+
+              {/* Planity Rating */}
+              <div className="flex items-center gap-3">
+                <span className="font-sans font-medium text-cream text-lg">5.0</span>
+                <div className="flex text-gold gap-[2px]">
+                  {[1, 2, 3, 4, 5].map((star) => (
+                    <Star key={`planity-${star}`} size={14} className="fill-gold" />
+                  ))}
+                </div>
+                <span className="font-sans text-xs text-cream/70 hidden sm:inline"><span className="underline decoration-white/30 underline-offset-2">Planity</span></span>
+              </div>
+            </div>
+
+            <p className="font-sans text-xs text-cream/60 tracking-widest uppercase">
+              Basé sur <span className="text-gold font-medium">1165 avis</span> certifiés
+            </p>
+          </motion.div>
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -140,6 +193,24 @@ export default function Home() {
             </a>
           </motion.div>
         </div>
+      </section>
+
+      {/* GALLERY SECTION */}
+      <section className="py-24 bg-white dark:bg-charcoal-light overflow-hidden border-b border-gold/10">
+        <div className="container mx-auto px-6 mb-12 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="font-serif text-4xl md:text-5xl text-charcoal dark:text-cream mb-4">
+              Nos <span className="italic text-gold">réalisations</span>
+            </h2>
+            <p className="font-sans text-sm uppercase tracking-widest text-gold/80">L&apos;art de la coiffure</p>
+          </motion.div>
+        </div>
+        <ImageLoop images={galleryImages} />
       </section>
 
       {/* 10 REASONS SECTION */}
@@ -183,6 +254,7 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
+
 
       {/* CALL TO ACTION / LOCATION */}
       <section className="py-24 bg-charcoal text-cream text-center px-6">
